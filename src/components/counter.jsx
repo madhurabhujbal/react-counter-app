@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: this.props.value,
+    value: this.props.value,
   };
 
   // constructor() {
@@ -12,7 +12,7 @@ class Counter extends Component {
 
   handleIncrement = (product) => {
     console.log(product);
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ value: this.state.value + 1 });
   };
 
   render() {
