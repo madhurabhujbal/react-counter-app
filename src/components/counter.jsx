@@ -5,14 +5,14 @@ class Counter extends Component {
     count: 0,
   };
 
-  constructor() {
-    super();
-    this.handleIncrement = this.handleIncrement.bind(this); //part after '=' will return an instance of handleIncrement method. Methods in javascript are objects; bind is built in method in js. handleIncrement method is reset to function returned from bind method.
-  }
+  // constructor() {
+  //   super();
+  //   this.handleIncrement = this.handleIncrement.bind(this); //part after '=' will return an instance of handleIncrement method. Methods in javascript are objects; bind is built in method in js. handleIncrement method is reset to function returned from bind method.
+  // }
 
-  handleIncrement() {
-    console.log("Increment clicked");
-  }
+  handleIncrement = () => {
+    console.log("Increment clicked", this);
+  };
 
   render() {
     return (
