@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    value: this.props.value,
+    //state includes data that is local or private to a component
+    value: this.props.value, //props include data that we give to a component. They are read-only and we cannot set values for props. They have to be set through state.
   };
 
   // constructor() {
@@ -16,11 +17,8 @@ class Counter extends Component {
   };
 
   render() {
-    console.log(this.props);
-
     return (
       <div>
-        {this.props.children}
         <span style={{ fontSize: 30 }} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
