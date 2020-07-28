@@ -11,13 +11,11 @@ class Counters extends Component {
     ],
   };
 
-  handleReset = () => {
-    const counters = this.state.counters.map((c) => {
-      c.value = 0;
-      return c;
-    });
-    this.setState({ counters });
+  handleIncrement = (counter) => {
+    console.log(counter);
   };
+
+  handleReset = () => {};
 
   handleDelete = (counterId) => {
     //We cannot modify counters array in state object directly. Hence we are creating a new array which returns counters array except the one with counterId. We set the state of main counters array through this new array.
@@ -38,6 +36,7 @@ class Counters extends Component {
           <Counter
             key={counter.id}
             onDelete={this.handleDelete}
+            onIncrement={this.handleIncrement}
             counter={counter}
           ></Counter>
         ))}
