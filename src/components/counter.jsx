@@ -28,6 +28,13 @@ class Counter extends Component {
         >
           Increment
         </button>
+
+        <button
+          onClick={this.handleDelete}
+          className="btn btn-danger btn-sm m-2"
+        >
+          Delete
+        </button>
       </div>
     );
   }
