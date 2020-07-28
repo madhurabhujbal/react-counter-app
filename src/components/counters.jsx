@@ -12,7 +12,9 @@ class Counters extends Component {
   };
 
   handleDelete = (counterId) => {
-    console.log("Event handler called", counterId);
+    //We cannot modify counters array in state object directly. Hence we are creating a new array which returns counters array except the one with counterId. We set the state of main counters array through this new array.
+    const counters = this.state.counters.filter((c) => c.id !== counterId);
+    this.setState({ counters });
   };
 
   render() {
