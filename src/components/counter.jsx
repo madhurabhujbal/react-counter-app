@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     //state includes data that is local or private to a component
-    value: this.props.value, //props include data that we give to a component. They are read-only and we cannot set values for props. They have to be set through state.
+    value: this.props.counter.value, //props include data that we give to a component. They are read-only and we cannot set values for props. They have to be set through state.
   };
 
   // constructor() {
@@ -30,7 +30,7 @@ class Counter extends Component {
         </button>
 
         <button
-          onClick={() => this.props.onDelete(this.props.id)}
+          onClick={() => this.props.onDelete(this.props.counter.id)}
           className="btn btn-danger btn-sm m-2"
         >
           Delete
