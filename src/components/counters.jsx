@@ -11,7 +11,7 @@ class Counters extends Component {
         >
           Reset
         </button>
-        {this.state.counters.map((counter) => (
+        {this.props.counters.map((counter) => (
           <Counter
             key={counter.id}
             onDelete={this.props.onDelete}
