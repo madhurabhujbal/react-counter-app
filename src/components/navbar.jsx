@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 //Navbar component does not have any event handlers or helper methods for calculation; no state, as data is updated by refering to props. It just has a render method. In this case, we can convert Navbar component to Stateless Functional Component i.e instead of class, define a function.
 
