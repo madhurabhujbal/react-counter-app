@@ -5,14 +5,14 @@ import React from "react";
 const Navbar = ({ totalCounters }) => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <a className="navbar-brand" href="#">
+      <button className="navbar-brand" style={{ border: 0, background: 0 }}>
         Navbar{" "}
         <span className="badge badge-pill badge-secondary">
           {" "}
           {/* {this.props.totalCounters}{" "}  'this' works only in class. In SFC, we have to pass props as a parameter of arrow function and modify the reference accordingly*/}
           {totalCounters}{" "}
         </span>
-      </a>
+      </button>
     </nav>
   );
 };
