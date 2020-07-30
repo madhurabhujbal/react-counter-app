@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = ({ totalCounters }) => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <button className="navbar-brand" style={{ border: 0, background: 0 }}>
+      <button className="navbar-brand funky-button">
         Navbar{" "}
         <span className="badge badge-pill badge-secondary">
           {" "}
