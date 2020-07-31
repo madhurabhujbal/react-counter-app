@@ -18,23 +18,32 @@ class Counter extends Component {
 
   render() {
     return (
-      <div>
-        <span style={{ fontSize: 30 }} className={this.getBadgeClasses()}>
-          {this.formatCount()}
-        </span>
-        <button
-          onClick={() => this.props.onIncrement(this.props.counter)} //For passing argument to event handler, define an arrow function, in body of function call the event handler, and pass argument to the event handler i.e product
-          className="btn btn-secondary btn-sm"
-        >
-          Increment
-        </button>
+      <div className="container flex-row">
+        <div className="row">
+          <div className="col-md-2">
+            <span style={{ fontSize: 30 }} className={this.getBadgeClasses()}>
+              {this.formatCount()}
+            </span>
+          </div>
 
-        <button
-          onClick={() => this.props.onDelete(this.props.counter.id)}
-          className="btn btn-danger btn-sm m-2"
-        >
-          Delete
-        </button>
+          <div className="col-md-2 align-self-center">
+            <button
+              onClick={() => this.props.onIncrement(this.props.counter)} //For passing argument to event handler, define an arrow function, in body of function call the event handler, and pass argument to the event handler i.e product
+              className="btn btn-secondary btn-md"
+            >
+              Increment
+            </button>
+          </div>
+
+          <div className="col-md-2 align-self-center">
+            <button
+              onClick={() => this.props.onDelete(this.props.counter.id)}
+              className="btn btn-danger btn-md"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
