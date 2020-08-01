@@ -20,13 +20,13 @@ class Counter extends Component {
     return (
       <div className="container flex-row">
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-2 align-self-center">
             <span style={{ fontSize: 30 }} className={this.getBadgeClasses()}>
               {this.formatCount()}
             </span>
           </div>
 
-          <div className="col-md-2">
+          <div className="col-md-2 align-self-center">
             <button
               onClick={() => this.props.onIncrement(this.props.counter)} //For passing argument to event handler, define an arrow function, in body of function call the event handler, and pass argument to the event handler i.e product
               className="btn btn-secondary btn-md"
@@ -35,7 +35,7 @@ class Counter extends Component {
             </button>
           </div>
 
-          <div className="col-md-2">
+          <div className="col-md-2 align-self-center">
             <button
               onClick={() => this.props.onDelete(this.props.counter.id)}
               className="btn btn-danger btn-md"
